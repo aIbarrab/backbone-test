@@ -14,7 +14,8 @@ MusicSearch.Views = MusicSearch.Views || {};
         events: {},
 
         initialize: function () {
-            this.listenTo(this.collection, 'change', this.render);
+            //this.listenTo(this.collection, 'change', this.render);
+            //this.listenTo(this.collection, 'reset', this.reset);
         },
 
         render: function () {

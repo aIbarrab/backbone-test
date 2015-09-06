@@ -29,8 +29,8 @@ module.exports = function (grunt) {
         yeoman: yeomanConfig,
         watch: {
             options: {
-                nospawn: true,
-                livereload: LIVERELOAD_PORT
+                nospawn: true
+                // livereload: LIVERELOAD_PORT
             },
             sass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],

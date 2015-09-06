@@ -8,6 +8,7 @@ window.MusicSearch = {
     Routers: {},
     init: function () {
         'use strict';
+        this.Routers = new MusicSearch.Routers.Play();
         console.log('Hello from Backbone!');
         new  this.Views.Search();
     }
@@ -16,4 +17,5 @@ window.MusicSearch = {
 $(document).ready(function () {
     'use strict';
     MusicSearch.init();
+    Backbone.history.start();
 });

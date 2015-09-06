@@ -12,13 +12,12 @@ MusicSearch.Views = MusicSearch.Views || {};
         el: '#music-search',
 
         events: {
-            'submit' : 'searchSongs'
+            'submit' : 'searchSongs',
+            'click .play-btn a': 'openSpotify'
         },
 
         initialize: function () {
-            //this.listenTo(this.model, 'change', this.render);
             this.render();
-            //this.collection.fetch();
         },
 
         render: function () {
@@ -36,9 +35,32 @@ MusicSearch.Views = MusicSearch.Views || {};
                 collection: new MusicSearch.Collections.Song([], {query: queryText})
             });
 
-            this.$('ul').append(SearchResults.render().el);
+            this.$('#search-results').html(SearchResults.render().el);
 
             console.log("searching for songs");
+        },
+
+        openSpotify: function(event){
+            event.preventDefault();
+
+            var $element = this.$(event.currentTarget);
+
+            console.log($element);
+
+            window.open(
+                $element.attr('href'),
+                'winname',
+                "directories=0," +
+                "titlebar=0," +
+                "toolbar=0," +
+                "location=0," +
+                "status=0," +
+                "menubar=0," +
+                "scrollbars=no," +
+                "resizable=no," +
+                "width=330," +
+                "height=400"
+            );
         }
 
     });

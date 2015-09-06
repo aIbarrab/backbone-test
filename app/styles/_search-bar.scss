@@ -1,0 +1,21 @@
+@mixin bg-search($opacity){
+  background: rgba(54, 118, 143, $opacity);
+  border: 0;
+  -webkit-box-shadow:inset 0 0 10px #025772;
+  -moz-box-shadow:inset 0 0 10px #025772;
+  box-shadow:inset 0 0 10px #025772;
+}
+
+.input-append{
+  input{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    @include bg-search(0.5);
+    padding: 20px;
+  }
+  .input-group-addon{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    @include bg-search(0.5);
+  }
+}

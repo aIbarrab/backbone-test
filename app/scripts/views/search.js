@@ -18,6 +18,7 @@ MusicSearch.Views = MusicSearch.Views || {};
         initialize: function () {
             //this.listenTo(this.model, 'change', this.render);
             this.render();
+            //this.collection.fetch();
         },
 
         render: function () {
@@ -26,8 +27,16 @@ MusicSearch.Views = MusicSearch.Views || {};
             return this;
         },
 
-        searchSongs: function(event){
+        searchSongs: function(event) {
             event.preventDefault();
+
+            var queryText = this.$("#query").val();
+
+            var SearchResults = new MusicSearch.Views.Songs({
+                collection: new MusicSearch.Collections.Song([], {query: queryText})
+            });
+
+            this.$('ul').append(SearchResults.render().el);
 
             console.log("searching for songs");
         }

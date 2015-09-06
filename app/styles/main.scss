@@ -3,6 +3,10 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstr
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
 @import "variables";
 
+@font-face {
+  font-family: SameSameButDifferent;
+  src: url(../fonts/SameSameButDifferent.ttf);
+}
 
 body{
   background: url(../images/search-music-bg.jpg);
@@ -13,6 +17,23 @@ ul{
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+h1{
+  font-family: SameSameButDifferent;
+  background: -webkit-linear-gradient(#fff, #c3c3c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+}
+
+.centered-column{
+  float: none;
+  margin: 0 auto;
+}
+
+.logo{
+  margin-right: 10px;
 }
 
 /* Search Bar Styles */

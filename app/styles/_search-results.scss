@@ -1,3 +1,10 @@
+@mixin gradient($dir, $color1, $color2){
+  background: -webkit-linear-gradient($dir, $color1, $color2);
+  background: -o-linear-gradient($dir, $color1, $color2);
+  background: -moz-linear-gradient($dir, $color1, $color2);
+  background: linear-gradient(to + $dir, $color1, $color2);
+}
+
 #search-results{
   .song{
     padding: 15px;
@@ -5,7 +12,7 @@
     float: left;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     &:nth-child(even) {
       background-color: rgba(255, 255, 255, 0.3);
     }
@@ -15,23 +22,39 @@
     .song-artist, .song-name{
       width: 50%;
     }
+    .radio-btns-group{
+      position: relative;
+      top: -19px;
+      .radio-btn{
+        cursor: pointer;
+        border: 1px solid #b29d11;
+        padding: 8px 20px;
+        float: left;
+        font-weight: bold;
+        border-radius: 8px;
+        @include gradient(bottom, $global_cta_dark, $global_cta_light);
+        &.left{
+          border-right: 0;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+        }
+        &.right{
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+        }
+      }
+    }
   }
   .play-btn{
     margin-right: 10px;
     a{
-      width: 40px;
-      height: 40px;
-      text-indent: -9999999px;
-      background: -webkit-linear-gradient(bottom, $play-btn-top-color , $play-btn-bottom-color);
-      background: -o-linear-gradient(bottom, $play-btn-top-color , $play-btn-bottom-color);
-      background: -moz-linear-gradient(bottom, $play-btn-top-color , $play-btn-bottom-color);
-      background: linear-gradient(to bottom, $play-btn-top-color , $play-btn-bottom-color);
-      &:after{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 50px 0 50px 86.6px;
-        border-color: transparent transparent transparent #ffffff;
+      color: #FFF;
+      padding: 8px 9px 10px;
+      font-size: 20px;
+      border-radius: 4px;
+      @include gradient(bottom, $play-btn-bottom-color, $play-btn-top-color);
+      &:hover, &:focus{
+        text-decoration: none;
       }
     }
   }

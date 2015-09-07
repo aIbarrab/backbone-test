@@ -13,7 +13,9 @@ MusicSearch.Views = MusicSearch.Views || {};
 
         events: {
             'submit' : 'searchSongs',
-            'click .play-btn a': 'openSpotify'
+            'click .input-group-addon .glyphicon': 'searchSongs',
+            'click .play-btn a': 'openSpotify',
+            'click .radio-btn': 'checkRadio'
         },
 
         initialize: function () {
@@ -35,9 +37,23 @@ MusicSearch.Views = MusicSearch.Views || {};
                 collection: new MusicSearch.Collections.Song([], {query: queryText})
             });
 
-            this.$('#search-results').html(SearchResults.render().el);
+            this.$('#search-results')
+                .html(SearchResults.render().el)
+                .hide()
+                .fadeIn(500);
 
             console.log("searching for songs");
+        },
+
+
+        checkRadio: function(event){
+            var $radioBtn = this.$(event.currentTarget),
+                className = 'checked';
+
+            if(!$radioBtn.hasClass(className)){
+                $radioBtn.parent().children('.' + className).removeClass(className);
+                $radioBtn.addClass(className);
+            }
         },
 
         openSpotify: function(event){

@@ -1,0 +1,21 @@
+@mixin gradient($dir, $color1, $color2){
+  background: -webkit-linear-gradient($dir, $color1, $color2);
+  background: -o-linear-gradient($dir, $color1, $color2);
+  background: -moz-linear-gradient($dir, $color1, $color2);
+  background: linear-gradient(to + $dir, $color1, $color2);
+}
+
+@mixin bg-search($opacity){
+  background: rgba(3, 97, 128, $opacity);
+  border: 0;
+  -webkit-box-shadow:inset 0 0 10px #025772;
+  -moz-box-shadow:inset 0 0 10px #025772;
+  box-shadow:inset 0 0 10px #025772;
+}
+
+@mixin radial-gradient($color1, $color2){
+  background: -webkit-radial-gradient($color1, $color2); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient($color1, $color2); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
+  background: radial-gradient($color1, $color2); /* Standard syntax */
+}

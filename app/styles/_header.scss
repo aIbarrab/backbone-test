@@ -1,0 +1,12 @@
+header{
+  border-top: 3px solid $global_cta_light;
+  #now-playing {
+    margin-right: 10px;
+  }
+  #now-playing, #rate-song{
+    border-radius: 0 0 20px 20px;
+    padding: 1px 25px 4px;
+    @include gradient(bottom, $global_cta_dark, $global_cta_light);
+    float: left;
+  }
+}

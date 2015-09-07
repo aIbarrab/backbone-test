@@ -1,13 +1,21 @@
-<% _.each(collection, function(model) { %>
-<ul class="song">
-    <li class="play-btn">
-        <a class="glyphicon glyphicon-play" href="/#play/<%=model.url%>" class="btn"></a>
-    </li>
-    <li class="song-name"><%= model.songname %></li>
-    <li class="song-artist"><%= model.artistname %></li>
-    <li class="radio-btns-group pull-right">
-        <div class="radio-btn left">today</div>
-        <div class="radio-btn right">friday</div>
-    </li>
-</ul>
-<% }); %>
+<% if (collection.length > 0) { %>
+    <% _.each(collection, function(model) { %>
+    <ul class="song">
+        <li class="play-btn">
+            <a class="glyphicon glyphicon-play" href="/#play/<%=model.url%>" class="btn"></a>
+        </li>
+        <li class="song-info">
+            <ul>
+                <li class="song-name"><%= model.songname %></li>
+                <li class="song-artist"><%= model.artistname %></li>
+            </ul>
+        </li>
+        <li class="radio-btns-group pull-right">
+            <div class="radio-btn left">Today</div>
+            <div class="radio-btn right">Friday</div>
+        </li>
+    </ul>
+    <% }); %>
+<% } else {%>
+    <div class="message">No songs found for specified criteria</div>
+<% } %>

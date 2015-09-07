@@ -1,0 +1,21 @@
+.clouds{
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  img{
+    -webkit-animation: moveclouds 60s linear infinite;
+    -moz-animation: moveclouds 60s linear infinite;
+    -o-animation: moveclouds 60s linear infinite;
+  }
+}
+
+@-webkit-keyframes moveclouds {
+  0% {margin-left: 1400px;}
+  100% {margin-left: -300px;}
+}
+
+@keyframes moveclouds {
+  0% {margin-left: 1400px;}
+  100% {margin-left: -300px;}
+}

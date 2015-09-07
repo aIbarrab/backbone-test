@@ -2,15 +2,30 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstr
 
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
 @import "variables";
+@import "mixins";
 
 @font-face {
   font-family: SameSameButDifferent;
   src: url(../fonts/SameSameButDifferent.ttf);
 }
 
+@font-face {
+  font-family: TitilliumText22L001;
+  src: url(../fonts/TitilliumText22L001.otf);
+}
+
+@font-face {
+  font-family: "DIN Medium";
+  src: url("../fonts/DIN Medium.ttf");
+}
+
 body{
-  background: url(../images/search-music-bg.jpg);
-  background-size: cover;
+  @include radial-gradient(#0098b4, #006084);
+  min-height: 300px;
+}
+
+input{
+  color: #eee !important;
 }
 
 ul{
@@ -20,11 +35,14 @@ ul{
 }
 
 h1{
+  color: #eee;
   font-family: SameSameButDifferent;
   background: -webkit-linear-gradient(#fff, #c3c3c3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
   font-size: 48px;
+  text-align: center;
 }
 
 .centered-column{
@@ -36,8 +54,35 @@ h1{
   margin-right: 10px;
 }
 
+/* Header Styles */
+@import "header";
+
+/* BG Clouds Styles */
+@import "clouds";
+
 /* Search Bar Styles */
 @import "search-bar";
 
 /* Search Result Styles */
 @import "search-results";
+
+footer{
+  margin-top: 50px;
+  float: left;
+  background: url(/images/footer-bg.png);
+  width: 100%;
+  a:hover{
+    color: $global_cta_light;
+  }
+  & > ul > li {
+    float: left;
+    width: 50%;
+    padding: 50px;
+  }
+  & > ul > li, & > ul > li > a{
+    color: $global_cta_dark;
+  }
+}
+
+/* breakpoint max.width 435px */
+@import "breakpoints/480";

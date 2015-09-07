@@ -10,7 +10,7 @@ window.MusicSearch = {
         'use strict';
         this.Routers = new MusicSearch.Routers.Play();
         console.log('Hello from Backbone!');
-        new  this.Views.Search();
+        new this.Views.Search();
     }
 };
 

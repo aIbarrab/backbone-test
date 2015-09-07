@@ -1,0 +1,52 @@
+@media (max-width: 480px) {
+  h1{
+    font-size: 8.1vw;
+  }
+  .song-info{
+    .song-name {
+      max-width: 120px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: 20px;
+      white-space: nowrap;
+    }
+  }
+
+  header{
+    .pull-right{
+      float: none !important;
+      margin: 0 auto;
+      width: 262px;
+      height: 25px;
+    }
+  }
+
+  #search-results .song .radio-btns-group{
+    .radio-btn{
+      padding-top: 0;
+      padding-bottom: 0;
+      float: none;
+      border-radius: 5px;
+      &.left{
+        border-right: 1px solid $cta_border_color;
+        border-bottom: 0;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+        @include gradient(bottom, $global_cta_light, $global_cta_dark);
+      }
+      &.right{
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  footer > ul > li {
+    padding: 5px;
+    &, span.pull-right{
+      float: left !important;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

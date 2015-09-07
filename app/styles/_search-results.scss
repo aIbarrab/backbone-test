@@ -1,11 +1,10 @@
-@mixin gradient($dir, $color1, $color2){
-  background: -webkit-linear-gradient($dir, $color1, $color2);
-  background: -o-linear-gradient($dir, $color1, $color2);
-  background: -moz-linear-gradient($dir, $color1, $color2);
-  background: linear-gradient(to + $dir, $color1, $color2);
-}
-
 #search-results{
+  min-height: 283px;
+  .message{
+    width: 100%;
+    color: $global_cta_dark;
+    text-align: center;
+  }
   .song{
     padding: 15px;
     height: 70px;
@@ -19,19 +18,25 @@
     & > li{
       float: left;
     }
+    .song-name{
+      font-family: "DIN Medium";
+    }
+    .song-artist{
+      font-style: italic;
+      color: #333;
+    }
     .song-artist, .song-name{
-      width: 50%;
+      text-transform: capitalize;
     }
     .radio-btns-group{
-      position: relative;
-      top: -19px;
       .radio-btn{
         cursor: pointer;
-        border: 1px solid #b29d11;
+        border: 1px solid $cta_border_color;
         padding: 8px 20px;
         float: left;
-        font-weight: bold;
         border-radius: 8px;
+        font-family: TitilliumText22L001;
+        text-shadow: 0px 0px black, 1px 0px black, 0px 0 black, 0 0px black;
         @include gradient(bottom, $global_cta_dark, $global_cta_light);
         &.left{
           border-right: 0;
@@ -41,6 +46,10 @@
         &.right{
           border-bottom-left-radius: 0;
           border-top-left-radius: 0;
+        }
+        &.checked{
+          background: $global_cta_dark !important;
+          cursor: default;
         }
       }
     }

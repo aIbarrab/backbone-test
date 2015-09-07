@@ -1,0 +1,67 @@
+{
+  "songs": [
+    {
+      "url": "spotify:track:2MZj97rndjBRuZq12Slwsa",
+      "id": 25479197,
+      "songname": "Flying Into Tokyo",
+      "artistid": 45,
+      "artistname": "Magnetic Man",
+      "albumid": 235469,
+      "albumname": "Magnetic Man"
+    },
+    {
+      "url": "spotify:track:7eopdKNwJ6H4w7DF3PCgk0",
+      "id": 8815585,
+      "songname": "moonlight sonata",
+      "artistid": 1833,
+      "artistname": "beethoven",
+      "albumid": 5619520,
+      "albumname": "beethoven piano sonatas"
+    },
+    {
+      "url": "spotify:track:66HsVsDRdqCKbu5rLGzpiN",
+      "id": 8815586,
+      "songname": "twist and shout",
+      "artistid": 1833,
+      "artistname": "beatles",
+      "albumid": 5619520,
+      "albumname": "beatles"
+    },
+    {
+      "url": "spotify:track:5XlpqtpVlppomCdHJcyrbY",
+      "id": 8815587,
+      "songname": "i saw her standing there",
+      "artistid": 1833,
+      "artistname": "beatles",
+      "albumid": 5619520,
+      "albumname": "beatles"
+    },
+    {
+      "url": "spotify:track:2EbcwCj2gDG2ebnOm4H7jQ",
+      "id": 8815588,
+      "songname": "here comes the sun",
+      "artistid": 1833,
+      "artistname": "beatles",
+      "albumid": 5619520,
+      "albumname": "beatles"
+    },
+    {
+      "url": "spotify:track:2LOwEiLjnZEI24yeKV5zRt",
+      "id": 8815589,
+      "songname": "ain't she sweet",
+      "artistid": 1833,
+      "artistname": "beatles",
+      "albumid": 5619520,
+      "albumname": "beatles"
+    },
+    {
+      "url": "spotify:track:0jMXNdP4k83yL4vGLKBkw3",
+      "id": 8815590,
+      "songname": "please please me",
+      "artistid": 1833,
+      "artistname": "beatles",
+      "albumid": 5619520,
+      "albumname": "beatles reimagined"
+    }
+  ]
+}
